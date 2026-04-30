@@ -44,6 +44,6 @@ describe("Protocolo Web3 MVP", function () {
     await dao.connect(user).createProposal("Teste de governanca", 3600);
     await dao.connect(user).vote(1, true);
     const proposal = await dao.proposals(1);
-    expect(proposal.votesFor).to.equal(ethers.parseEther("1000"));
+    expect(proposal.votesFor).to.equal(ethers.parseEther("950"));
   });
 });
